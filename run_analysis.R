@@ -77,6 +77,13 @@ read_files <- function(file_name1, file_name2, col_names){
 tryCatch(downloadAndStageFiles(), 
          error = function(e) print('Unable to download files')) 
 
+##-------------------------------------------------------------------
+## NOTE:  PROCESSING CONTINUES EVEN IF THE DOWNLOAD FAILS!!!!
+## THIS IS ALLOWABLE IN THAT IT SATISFIES THE REQUIREMENTS THAT
+## THE SCRIPT RUN IF THE DATA IS IN THE CURRENT WORKING DIRECTORY
+## AS THIS SCRIPT
+##-------------------------------------------------------------------
+
 ##
 ## Read in the raw data
 ##
